@@ -208,32 +208,31 @@ class _HomeScreenState extends State<HomeScreen> {
               ],
             ),
           ),
-          SizedBox(height: 35),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 15),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Expanded(
-                  child: GestureDetector(
-                    onTap: () {},
-                    child: ListOfDoctor(
-                      doctor: doctors[0], // Example: use doctors[0] or dynamically as per your logic
-                    ),
-                  ),
-                ),
-                Expanded(
-                  child: GestureDetector(
-                    onTap: () {},
-                    child: ListOfDoctor(
-                      doctor: doctors[1], // Example: use doctors[1] or dynamically as per your logic
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-
+          // SizedBox(height: 35),
+          // Padding(
+          //   padding: const EdgeInsets.symmetric(horizontal: 15),
+          //   child: Row(
+          //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          //     children: [
+          //       Expanded(
+          //         child: GestureDetector(
+          //           onTap: () {},
+          //           child: ListOfDoctor(
+          //             doctor: doctors[0], // Example: use doctors[0] or dynamically as per your logic
+          //           ),
+          //         ),
+          //       ),
+          //       Expanded(
+          //         child: GestureDetector(
+          //           onTap: () {},
+          //           child: ListOfDoctor(
+          //             doctor: doctors[1], // Example: use doctors[1] or dynamically as per your logic
+          //           ),
+          //         ),
+          //       ),
+          //     ],
+          //   ),
+          // ),
 
           Expanded(
             child: SingleChildScrollView(

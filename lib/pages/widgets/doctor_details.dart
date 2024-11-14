@@ -22,7 +22,7 @@ class DoctorDetails extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 15),
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       GestureDetector(
                         onTap: () {
@@ -89,7 +89,7 @@ class DoctorDetails extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 10),
             Expanded(
               child: Container(
                 padding: const EdgeInsets.only(top: 20),
@@ -166,7 +166,7 @@ class DoctorDetails extends StatelessWidget {
                               ),
                             ],
                           ),
-                          Text(
+                          const Text(
                             "See all",
                             style: TextStyle(
                               color: purpleColor,
@@ -195,10 +195,120 @@ class DoctorDetails extends StatelessWidget {
                         ),
                       ),
                     ),
+
+                    const SizedBox(height: 20,),
+
+                     Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 15),
+                      child: Column(
+                        children: [
+                          Text(
+                            "Location",
+                            style: TextStyle(
+                              fontSize: 18,
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              letterSpacing: -.5
+                            ),
+                          ),
+                          SizedBox(height: 20,),
+                          Row(
+                            children: [
+                              Container(
+                                padding: EdgeInsets.all(14),
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: Colors.purple.withOpacity(0.3)
+                                ),
+                                child: Icon(
+                                  Icons.location_on,
+                                  color: Colors.purple,
+                                ),
+                              ),
+                              SizedBox(width: 15,),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text("Lotus Medical Center",
+                                  style: TextStyle(
+                                    fontSize: 18,
+                                    letterSpacing: -.5,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.bold
+                                  ),),
+
+                                  SizedBox(height: 5,),
+                                  Text(
+                                   doctor.location,
+                                    style: TextStyle(
+                                      color: Colors.grey
+                                    ),
+                                  ),
+                                ],
+                              )
+                            ],
+                          )
+                        ],
+                      ),
+                    )
                   ],
                 ),
               ),
             ),
+          ],
+        ),
+      ),
+      bottomNavigationBar: Container(
+        padding: const EdgeInsets.all(15),
+        decoration: BoxDecoration(
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.withOpacity(0.3),
+              blurRadius: 5
+            )
+          ],
+          color: Colors.white
+        ),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Text(
+                  "Consultation Price",
+                  style: TextStyle(
+                    letterSpacing: 0,
+                    color: Colors.grey
+                  ),
+                ),
+                Text(
+                  "\$${doctor.price}",
+                  style: const TextStyle(
+                    fontSize: 20,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 25,),
+            Container(
+              padding: EdgeInsets.symmetric(vertical: 20),
+              decoration: BoxDecoration(
+                color: Colors.purple,
+                borderRadius: BorderRadius.circular(12)
+              ),
+              child: Center(
+                child: Text(
+                  "Book Apoinment",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold
+                  ),
+                ),
+              ),
+            )
           ],
         ),
       ),
