@@ -1,4 +1,5 @@
 import 'package:doctor_appoinment/pages/home_screen.dart';
+import 'package:doctor_appoinment/pages/schedule_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
@@ -15,7 +16,7 @@ class _MainPageState extends State<MainPage> {
   final List pages = [
     HomeScreen(),
     Scaffold(),
-    Scaffold(),
+    ScheduleScreen(),
     Scaffold(),
   ];
 

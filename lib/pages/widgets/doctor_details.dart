@@ -1,5 +1,6 @@
 import 'package:doctor_appoinment/const.dart';
 import 'package:doctor_appoinment/model/doctor.dart';
+import 'package:doctor_appoinment/pages/schedule_screen.dart';
 import 'package:doctor_appoinment/pages/widgets/review_items.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -300,11 +301,17 @@ class DoctorDetails extends StatelessWidget {
                 borderRadius: BorderRadius.circular(12)
               ),
               child: Center(
-                child: Text(
-                  "Book Apoinment",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold
+                child: InkWell(
+                  onTap: (){
+                    Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => ScheduleScreen()));
+                  },
+                  child: Text(
+                    "Book Apoinment",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold
+                    ),
                   ),
                 ),
               ),
